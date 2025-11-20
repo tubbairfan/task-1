@@ -1,64 +1,88 @@
-import React from "react";
-import image1 from "../assets/images/image1.svg";
-import build3 from "../assets/images/build3.png";
 import { FiMapPin, FiCreditCard, FiSend } from "react-icons/fi";
+import tripImg from "../assets/images/image1.svg";
+import romeImg from "../assets/images/build3.png";
+import "./Booking.css";
 
 const steps = [
   {
-    id: 1,
+    icon: <FiMapPin size={26} color="#fff" />,
     title: "Choose Destination",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: <FiMapPin size={50} color="#ff6b3d" />,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.",
+    bg: "#F4A100",
   },
   {
-    id: 2,
+    icon: <FiCreditCard size={26} color="#fff" />,
     title: "Make Payment",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: <FiCreditCard size={50} color="#ff6b3d" />,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.",
+    bg: "#F2614C",
   },
   {
-    id: 3,
+    icon: <FiSend size={26} color="#fff" />,
     title: "Reach Airport on Selected Date",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    icon: <FiSend size={50} color="#ff6b3d" />,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.",
+    bg: "#0D6A7A",
   },
 ];
+
 const Booking = () => {
   return (
-    <section className="booking-section">
-      <div className="booking-header">
-        <h2>Easy and Fast</h2>
-        <p>Book your next trip in 3 easy steps</p>
+    <div className="booking-section">
+      {/* LEFT SIDE */}
+      <div className="booking-left">
+        <p className="booking-small-title">Easy and Fast</p>
+        <h2 className="booking-main-title">Book Your Next Trip<br />In 3 Easy Steps</h2>
+
+        <div className="steps-container">
+          {steps.map((item, i) => (
+            <div className="step-box" key={i}>
+              <div className="step-icon" style={{ background: item.bg }}>
+                {item.icon}
+              </div>
+
+              <div>
+                <h4 className="step-title">{item.title}</h4>
+                <p className="step-desc">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-       <div className="booking-steps">
-      {steps.map((step) => (
-        <div key={step.id} className="step-card">
-          {step.icon}
-          <h3>{step.title}</h3>
-          <p>{step.description}</p>
-        </div>
-      ))}
-    </div>
-      {/* Trips / Ongoing */}
-      <div className="booking-trips">
+      {/* RIGHT SIDE */}
+      <div className="booking-right">
         <div className="trip-card">
-          <img src={image1} alt="Trip to Greece" />
-          <h3>Trip to Greece</h3>
-          <p>Explore the beauty of Greece with our curated packages.</p>
+          <img src={tripImg} className="trip-img" />
+
+          <h3 className="trip-title">Trip To Greece</h3>
+          <p className="trip-date">14–29 June | by Robbin joseph</p>
+
+          <div className="trip-icons">
+            <FiMapPin />
+            <FiSend />
+            <FiCreditCard />
+          </div>
+
+          <p className="people-going">24 people going</p>
         </div>
 
-        <div className="trip-card ongoing">
-          <img src={build3} alt="Trip to Rome" />
-          <h3>Ongoing</h3>
-          <p>Trip to Rome</p>
-          <p>40% Complete</p>
-          <div className="progress-bar">
-            <div className="progress" style={{ width: "40%" }}></div>
+        {/* FLOATING SMALL CARD */}
+        <div className="floating-card">
+          <img src={romeImg} className="float-img" />
+
+          <div>
+            <p className="ongoing-label">Ongoing</p>
+            <h4 className="float-title">Trip to Rome</h4>
+            <p className="float-progress">
+              <span>40%</span> completed
+            </p>
+
+            <div className="progress-bar">
+              <div className="progress-fill"></div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
