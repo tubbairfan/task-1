@@ -1,0 +1,117 @@
+.booking-section {
+  padding: 60px 80px;
+  font-family: 'Poppins', sans-serif;
+  background: #fdfdfd;
+}
+
+.booking-header h2 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #222;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.booking-header p {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Steps */
+.booking-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.step-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+.step-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.step-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff6b3d;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Trips Section */
+.booking-trips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.trip-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.trip-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.trip-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Progress bar for ongoing trip */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background: #ff6b3d;
+  border-radius: 10px;
+}
