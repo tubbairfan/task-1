@@ -1,0 +1,106 @@
+.subscribe-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 80px 0;
+}
+
+.subscribe-box {
+  width: 75%;
+  background: #f7f5ff;
+  padding: 60px 40px;
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* Background rings like screenshot */
+.subscribe-box::before,
+.subscribe-box::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #e5e3ff;
+  border-radius: 50%;
+  top: -30px;
+  left: -60px;
+}
+
+.subscribe-box::after {
+  top: auto;
+  bottom: -30px;
+  right: -60px;
+}
+
+/* Heading Style */
+.subscribe-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #545465;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+/* Form Section */
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 14px 20px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.mail-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #777;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  color: #333;
+}
+
+.subscribe-btn {
+  background: #ff6b3d;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.subscribe-btn:hover {
+  background: #ff5a22;
+}
+
+/* Floating send icon */
+.send-icon {
+  position: absolute;
+  right: 120px;
+  top: 40px;
+  background: #4b2fe1;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -4,6 +4,7 @@ import Category from "./components/Category"
 import Destination from "./components/Destination"
 import Booking from "./components/Booking"
 import Images from "./components/Images"
+import Subscribe from "./components/Subscribe"
 const App = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const App = () => {
     <Destination/>
     <Booking/>
     <Images/>
+    <Subscribe/>
     </div>
   )
 }
