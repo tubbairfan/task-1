@@ -2,9 +2,7 @@ import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
 import googlePlay from "../assets/images/google-play.svg"; 
 import appStore from "../assets/images/play-store.svg";
 import "./Footer.css";
-
 const Footer = () => {
-  // Footer Column Data
   const columns = [
     {
       title: "Company",
@@ -22,8 +20,6 @@ const Footer = () => {
 
   return (
     <footer className="footer-container">
-
-      {/* Logo Section */}
       <div className="footer-logo">
         <h1 className="logo-text">Jadoo.</h1>
         <p className="logo-desc">
@@ -31,8 +27,6 @@ const Footer = () => {
           control for much longer.
         </p>
       </div>
-
-      {/* Dynamic Columns */}
       {columns.map((col, index) => (
         <div key={index} className="footer-col">
           <h3>{col.title}</h3>
@@ -47,27 +41,20 @@ const Footer = () => {
           ))}
         </div>
       ))}
-
-      {/* Social + App */}
       <div className="footer-right">
         <div className="social-icons">
           <div><FiFacebook size={18} /></div>
           <div><FiInstagram size={18} /></div>
           <div><FiTwitter size={18} /></div>
         </div>
-
         <p className="app-title">Discover our app</p>
-
         <div className="app-buttons">
           <img src={googlePlay} alt="Google Play" className="app-img" />
           <img src={appStore} alt="App Store" className="app-img" />
         </div>
       </div>
-
-      {/* Bottom Line */}
       <p className="footer-copy">All rights reserved @jadoo.co</p>
     </footer>
   );
 };
-
 export default Footer;
