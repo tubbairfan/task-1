@@ -19,14 +19,15 @@ const Images = () => {
 const styles = {
   container: {
     display: "flex",
-    gap: "60px", // space between images
+    gap: "60px", 
     justifyContent: "center",
     alignItems: "center",
-    flexWrap: "nowrap", // keeps images in one row
+    flexWrap: "nowrap", 
     padding: "10px",
+    margin:"0px 0px 0px 90px"
   },
   image: {
-    width: "100px", // adjust size as needed
+    width: "100px", 
     height: "auto",
     objectFit: "contain",
   },

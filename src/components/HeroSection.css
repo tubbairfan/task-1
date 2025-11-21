@@ -1,18 +1,17 @@
 .hero-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: nowrap;   justify-content: space-between;
   align-items: center;
   padding: 50px 60px;
   font-family: "Poppins", sans-serif;
   gap: 20px;
 }
-.hero-left {
-  flex: 1;
-  min-width: 300px;
-  padding-left: 40px; 
-}
 
+.hero-left {
+  flex: 1 1 50%;
+  min-width: 300px;
+  padding-left: 40px;
+}
 .tagline {
   font-weight: 600;
   color: #ff6b3d;
@@ -21,9 +20,9 @@
 }
 
 .hero-heading {
-  font-family: "Roboto", sans-serif; 
-  font-size: 52px; 
-  font-weight: 800; 
+  font-family: "Roboto", sans-serif;
+  font-size: 52px;
+  font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
 }
@@ -39,6 +38,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
@@ -72,10 +72,9 @@
   font-weight: 500;
 }
 
-/* Right image */
 .hero-right {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 50%;
+  min-width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,14 +83,85 @@
 .hero-image {
   max-width: 100%;
   height: auto;
+  animation: bounceUpDown 3s ease-in-out infinite;
 }
 
-/* Optional: add small bounce animation */
 @keyframes bounceUpDown {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
-.hero-image {
-  animation: bounceUpDown 3s ease-in-out infinite;
+
+@media (max-width: 1200px) {
+  .hero-container {
+    padding: 40px 50px;
+  }
+
+  .hero-heading {
+    font-size: 45px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .play-demo img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    padding: 30px 40px;
+  }
+
+  .hero-heading {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+  }
+
+  .play-demo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container {
+    padding: 20px 15px;
+  }
+
+  .hero-left {
+    flex: 1 1 55%;
+    padding-left: 10px;
+  }
+
+  .hero-right {
+    flex: 1 1 45%;
+  }
+
+  .hero-heading {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    padding: 8px 15px;
+  }
+
+  .play-demo img {
+    width: 40px;
+    height: 40px;
+  }
 }

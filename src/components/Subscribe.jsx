@@ -1,12 +1,9 @@
-import { FiSend, FiMail } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
 import "./Subscribe.css";
 
 const Subscribe = () => {
   return (
     <div className="subscribe-wrapper">
-      <div className="send-icon">
-        <FiSend size={26} color="#fff" />
-      </div>
       <div className="subscribe-box">
         <h2 className="subscribe-title">
           Subscribe to get information, latest news and other

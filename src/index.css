@@ -1,39 +1,28 @@
-/* Import clean modern Google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-/* Navbar container */
 .navbar {
-  padding: 20px 40px;
+  padding: 20px 20px;
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   display: flex;
-  justify-content: space-between; /* left + right alignment */
+  justify-content: space-between;
   align-items: center;
   font-family: "Poppins", sans-serif;
+  width: 100%;
+  overflow: visible !important;
 }
-
-/* List container */
+.nav-logo {
+  font-size: 40px;
+  font-weight: 600;
+  color: #ff6b3d;
+  cursor: pointer;
+  margin: 0;
+}
 .nav-list {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 45px;
- 
 }
-
-/* Left Logo (Jadoo) */
-.nav-logo {
-   font-family: "Poppins", sans-serif; 
-  font-size: 40px;
-  font-weight: 600;
-  color: #ff6b3d;
-  margin-right: 320px;  /* pushes menu items to right */
-  margin-left: 50px; 
-  cursor: pointer;
-  /* letter-spacing: 1px; */
-}
-
-/* Each nav item */
 .nav-item {
   font-size: 18px;
   font-weight: 500;
@@ -41,24 +30,18 @@
   transition: 0.3s ease;
   color: #333;
 }
-
-/* Hover effect */
 .nav-item:hover {
   color: #ff6b3d;
   transform: translateY(-2px);
 }
-
-/* Dropdown container */
 .dropdown {
   position: relative;
+  z-index: 9999;
 }
 
-/* Dropdown menu */
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* below the parent */
   left: 0;
-  
   background: white;
   list-style: none;
   padding: 10px 0;
@@ -66,17 +49,21 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 6px;
   min-width: 100px;
-  z-index: 10;
+  z-index: 9999;
+  top: 110%;
 }
-
-/* Dropdown items */
 .dropdown-item {
   padding: 8px 15px;
   cursor: pointer;
   transition: 0.2s;
 }
+.dropdown-item:hover {
+  background: #ff6b3d;
+  color: white;
+  border-radius: 4px;
+}
 .dropdown-button {
-  border: 2px solid #ff6b3d; /* orange border */
+  border: 2px solid #ff6b3d;
   border-radius: 6px;
   padding: 5px 12px;
   display: flex;
@@ -84,15 +71,50 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
-.dropdown-item:hover {
-  background: #ff6b3d;
-  color: white;
-  border-radius: 4px;
-}
-/* Dropdown icon */
 .dropdown-icon {
   font-size: 12px;
   margin-left: 5px;
 }
-
-
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+  .nav-logo {
+    font-size: 26px;
+    margin: 0;
+  }
+  .nav-list {
+    gap: 30px;    
+  }
+  .nav-item {
+    font-size: 14px;  
+    white-space: nowrap;
+  }
+  .dropdown-button {
+    padding: 3px 8px; 
+  }
+  .dropdown-icon {
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+  .nav-logo {
+    font-size: 38px;
+  }
+  .nav-list {
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-logo {
+    font-size: 40px;
+  }
+  .nav-list {
+    gap: 45px;
+  }
+}
