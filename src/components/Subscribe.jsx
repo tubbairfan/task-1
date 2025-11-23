@@ -1,6 +1,5 @@
 import { FiMail } from "react-icons/fi";
 import "./Subscribe.css";
-
 const Subscribe = () => {
   return (
     <div className="subscribe-wrapper">
@@ -15,7 +14,6 @@ const Subscribe = () => {
             <FiMail className="mail-icon" />
             <input type="email" placeholder="Your email" />
           </div>
-
           <button className="subscribe-btn">Subscribe</button>
         </form>
       </div>

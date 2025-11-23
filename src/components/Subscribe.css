@@ -1,5 +1,6 @@
 .subscribe-box {
-  width: 600px;
+  width: 100%;
+  max-width: 600px; 
   background: #f7f5ff;
   padding: 60px 40px;
   border-radius: 25px;
@@ -7,6 +8,8 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+  margin: 0 auto; 
+  box-sizing: border-box;
 }
 .subscribe-title {
   font-size: 26px;
@@ -19,6 +22,7 @@
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap; 
 }
 .input-wrapper {
   display: flex;
@@ -27,6 +31,7 @@
   padding: 14px 20px;
   border-radius: 12px;
   width: 300px;
+  max-width: 100%; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 .mail-icon {
@@ -55,5 +60,20 @@
 .subscribe-btn:hover {
   background: #ff5a22;
 }
-
-
+@media (max-width: 1024px) {
+  .subscribe-title { font-size: 24px; margin-bottom: 30px; }
+  .input-wrapper { width: 250px; padding: 12px 18px; }
+  .subscribe-btn { padding: 12px 24px; font-size: 15px; }
+}
+@media (max-width: 768px) {
+  .subscribe-title { font-size: 22px; margin-bottom: 25px; }
+  .input-wrapper { width: 200px; padding: 10px 15px; }
+  .subscribe-btn { padding: 10px 22px; font-size: 14px; }
+}
+@media (max-width: 480px) {
+  .subscribe-box { padding: 40px 20px; }
+  .subscribe-title { font-size: 20px; margin-bottom: 20px; }
+  .input-wrapper { width: 100%; padding: 10px 15px; }
+  .subscribe-btn { width: 100%; padding: 12px 0; font-size: 14px; }
+  .subscribe-form { flex-direction: column; gap: 12px; }
+}
