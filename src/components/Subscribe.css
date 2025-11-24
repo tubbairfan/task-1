@@ -9,6 +9,7 @@
   overflow: hidden;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
   margin: 0 auto; 
+  margin-top: 30px;
   box-sizing: border-box;
 }
 .subscribe-title {
@@ -75,5 +76,5 @@
   .subscribe-title { font-size: 20px; margin-bottom: 20px; }
   .input-wrapper { width: 100%; padding: 10px 15px; }
   .subscribe-btn { width: 100%; padding: 12px 0; font-size: 14px; }
-  .subscribe-form { flex-direction: column; gap: 12px; }
+  .subscribe-form { flex-direction: row; gap: 12px; }
 }

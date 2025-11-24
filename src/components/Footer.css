@@ -26,7 +26,6 @@
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 .footer-col h3 {
   font-size: 18px;
@@ -68,11 +67,9 @@
   display: flex;
   gap: 10px;
 }
-
 .app-img {
   width: 120px;
 }
-
 .footer-copy {
   width: 100%;
   text-align: center;
@@ -90,33 +87,33 @@
   .footer-logo {
     margin: 0 auto;
   }
-
   .footer-links-row {
     display: flex;
     justify-content: center;
     gap: 35px;
   }
-
   .footer-col {
     align-items: center;
   }
-
   .footer-right {
     align-items: center;
     margin: 0 auto;
   }
-
   .social-icons {
     justify-content: center;
   }
-
   .app-buttons {
     justify-content: center;
   }
 }
-
 @media (max-width: 480px) {
   .app-img {
     width: 100px;
+  }
+   .footer-links-row {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap');
-
 .hero-container {
   display: flex;
   flex-wrap: nowrap; 
@@ -10,12 +9,10 @@
   gap: 20px;
   box-sizing: border-box;
 }
-
 .hero-left {
   flex: 1 1 50%;
   min-width: 250px;
 }
-
 .hero-right {
   flex: 1 1 50%;
   min-width: 250px;
@@ -23,7 +20,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .hero-image {
   max-width: 100%;
   height: auto;
@@ -42,20 +38,16 @@
   margin-bottom: 20px;
   line-height: 1.2;
 }
-
 .hero-description {
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
   margin-bottom: 30px;
 }
-
 .hero-buttons {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 30px;
 }
-
 .btn-primary {
   background-color: #ff6b3d;
   color: white;
@@ -66,52 +58,47 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 .btn-primary:hover {
   background-color: #e65c2f;
 }
-
 .play-demo {
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
 }
-
 .play-demo img {
   width: 50px;
   height: 50px;
 }
-
 .play-demo span {
   font-weight: 500;
 }
-
-
 @keyframes bounceUpDown {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
-
-
 @media (max-width: 1024px) {
   .hero-heading { font-size: 2rem; }
 }
-
 @media (max-width: 768px) {
   .hero-heading { font-size: 1.7rem; }
   .tagline { font-size: 1rem; }
   .play-demo img { width: 45px; height: 45px; }
 }
-
 @media (max-width: 480px) {
-  
+  .hero-container {
+    flex-direction: column;   
+    padding: 30px 5%;
+    gap: 45px;
+  }
   .hero-left, .hero-right {
-    flex: 1 1 45%;
-    min-width: 120px;
+    width: 100%;              
+    flex: unset;              
+    min-width: 100%;          
+    text-align: center;       
   }
   .hero-heading { font-size: 1.4rem; }
   .tagline { font-size: 0.9rem; }
   .btn-primary { padding: 10px 20px; font-size: 0.9rem; }
-  .hero-container { padding: 30px 5%; gap: 15px; }
 }
